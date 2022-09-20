@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
+  <div class="row d-flex column">
+    <section class="bg_primary">
+      <div class="container cards relative">
+        <div class="card back d-flex center column">
+          <span id="CVC" class="centered_right d-flex">000</span>
+        </div>
+        <div class="card front d-flex column space-between">
+          <img src="./images/card-logo.svg" alt="">
+          <span id="card_number" class="centered">0000 0000 0000 0000</span>
+          <div class="d-flex space-between"><span id="name" class="bottom-left">JANE APPLESEED</span><span
+              id="expiration_date" class="bottom-right">00/00</span></div>
+        </div>
 
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </section>
+    <div class="container details">
+      <form class="d-flex column" id="form" action="thank_you.html">
+        <label for="cardholder_name">CARDHOLDER NAME</label>
+        <input type="text" name="cardholder_name" placeholder="e.g. Jane Appleseed" id="">
+        <label for="card_number">CARD NUMBER</label>
+        <input type="text" name="card_number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" id="">
+        <div class="date_cvc d-flex">
+          <div class="month d-flex column">
+            <label for="exp_month">EXP.DATE</label>
+            <input type="text" name="exp_month"  maxlength="2" placeholder="MM" id="">
+          </div>
+          <div class="year d-flex column">
+            <label for="exp_year">(MM/YY)</label>
+            <input type="text" name="exp_year" maxlength="2" placeholder="YY" id="">
+          </div>
+          <div class="cvc d-flex column">
+            <label for="cvc">CVC</label>
+            <input type="text" name="cvc" maxlength="3" placeholder="e.g. 123" id="">
+          </div>
+        </div>
+        <input type="submit" value="Confirm">
+      </form>
+    </div>
   </div>
+
+
 </body>
+
 </html>

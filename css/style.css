@@ -1,0 +1,213 @@
+:root {
+    --var-very-dark-violet: hsl(278, 68%, 11%);
+    --var-grayish-violet: hsl(279, 6%, 55%);
+    --var-light-grayish-violet: hsl(270, 3%, 87%);
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+html {
+    font-size: 18px;
+}
+
+
+
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 2rem 1rem;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg_primary {
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+/* Utilities */
+
+.relative {
+    position: relative;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
+/* #region cards */
+
+
+
+.card {
+    width: 80%;
+    aspect-ratio: 16/9;
+    padding: 2rem;
+    color: white;
+}
+
+
+.front {
+    background-image: url(../images/bg-card-front.png);
+    position: absolute;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 0 20px black;
+}
+
+.back {
+    background-image: url(../images/bg-card-back.png);
+    position: relative;
+    top: 10%;
+    left: 20%;
+
+}
+
+.front,
+.back {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.back .centered_right {
+    padding: 0.4rem 0.5rem 0.8rem 0.5rem;
+    justify-content: flex-end;
+
+}
+
+
+
+.front img {
+    max-width: 20%;
+}
+
+.front .centered {
+    width: 100%;
+    font-size: 1.4rem;
+    word-spacing: 0.5rem;
+    text-align: center;
+}
+
+
+/* #endregion */
+
+
+/* #region details */
+
+.details {
+    padding-top: 15vh;
+}
+
+#form,
+input[type="text"] {
+    color: var(--var-very-dark-violet);
+}
+
+input {
+    font-size: 18px;
+}
+
+input[type="text"] {
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-color: var(--var-light-grayish-violet);
+    border-style: solid;
+    outline-color: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+    outline-style:inset;
+}
+
+
+
+
+
+
+
+
+
+
+
+input[name="card_number"] {
+    word-spacing: 1rem;
+}
+
+
+
+.date_cvc {
+    padding-bottom: 1rem;
+}
+
+.month,
+.year {
+    width: 15%;
+    margin-right: 1rem;
+}
+
+.cvc {
+    flex-grow: 1;
+}
+
+
+/* #endregion */
+
+
+@media screen and (min-width:1200px) {
+    .row {
+        flex-direction: row;
+        height: 100vh;
+
+    }
+
+    .container {
+        margin: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .bg_primary {
+        flex-grow: 1;
+    }
+
+    .details {
+        flex-basis: 60%;
+    }
+
+}
