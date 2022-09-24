@@ -14,11 +14,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.1rem;
 
 }
 
 html {
-    font-size: 18px;
+    font-size: 12px;
 }
 
 
@@ -76,7 +77,7 @@ img {
 
 
 .card {
-    width: 80%;
+    width: 25rem;
     aspect-ratio: 16/9;
     padding: 2rem;
     color: white;
@@ -89,7 +90,7 @@ img {
     top: 55%;
     left: 0;
     z-index: 1;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 2rem black;
 }
 
 .back {
@@ -97,6 +98,7 @@ img {
     position: relative;
     top: 10%;
     left: 20%;
+    box-shadow: 0 0 2rem black;
 
 }
 
@@ -104,7 +106,7 @@ img {
 .back {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .back .centered_right {
@@ -142,25 +144,26 @@ input[type="text"] {
 }
 
 input {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 input[type="text"] {
     margin: 0.5rem 0 1rem 0;
     padding: 0.5rem;
-    border-radius: 10px;
-    border-color: var(--var-light-grayish-violet);
+    border-radius: 0.375rem;
     border-style: solid;
-    outline-color: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%));
-    outline-style:inset;
+  
 }
 
 
-
-
-
-
-
+input[type="text"]:focus {
+    outline: none;
+    border: double 3px transparent;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(to right,hsl(249, 99%, 64%) , hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
 
 
 
@@ -185,11 +188,28 @@ input[name="card_number"] {
     flex-grow: 1;
 }
 
+input[type="submit"]{
+    padding: 1.2rem;
+    border-radius: 0.375rem;
+    color: white;
+    background-color: var(--var-very-dark-violet);
+    border: none;
+}
+
 
 /* #endregion */
 
 
+@media  screen and (min-width: 576px) {
+    html {
+        font-size: 16px;
+    }
+    
+}
+
+
 @media screen and (min-width:1200px) {
+
     .row {
         flex-direction: row;
         height: 100vh;
@@ -202,12 +222,42 @@ input[name="card_number"] {
         width: 100%;
     }
 
-    .bg_primary {
-        flex-grow: 1;
+
+    .back {
+        top: 23rem;
+        left: 50%;
     }
 
-    .details {
-        flex-basis: 60%;
+    .front {
+        top: 50%;
+        left: 25%;
     }
 
+    .container.details {
+        
+        position: relative;
+    }
+
+    #form {
+        width: calc(50%);
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        translate: -50% -50%;
+    }
+
+    .month,.year {
+        width: 20%;
+    }
+
+    .cvc {
+        width: 40%;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 18px;
+    }
 }
