@@ -1,3 +1,9 @@
+document.getElementById("name").innerHTML = localStorage.getItem("name");
+document.getElementById("card_number").innerHTML = localStorage.getItem("number");
+document.getElementById("month").innerHTML = localStorage.getItem("month");
+document.getElementById("year").innerHTML = localStorage.getItem("year");
+document.getElementById("cvc").innerHTML = localStorage.getItem("cardcvc");
+
 const form = document.forms["form"];
 
 function isNumber(array, id) {
@@ -110,11 +116,6 @@ function validateForm() {
     localStorage.setItem("month", form["exp_month"].value.toString());
     localStorage.setItem("year", form["exp_year"].value.toString());
     localStorage.setItem("cardcvc", form["cvc"].value.toString());
-    document.getElementById("name").innerHTML = localStorage.getItem("name");
-    document.getElementById("card_number").innerHTML = localStorage.getItem("number");
-    document.getElementById("month").innerHTML = localStorage.getItem("month");
-    document.getElementById("year").innerHTML = localStorage.getItem("year");
-    document.getElementById("cvc").innerHTML = localStorage.getItem("cardcvc");
 
 
 
