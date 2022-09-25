@@ -231,7 +231,7 @@ input[type="submit"]{
 
 
 
-#form span:not(.checkmark) {
+#form span:not(.checkmark,.msg) {
     display: inline-block;
     color: var(--var-grayish-violet);
     
