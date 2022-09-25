@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="row d-flex column">
+        <section class="bg_primary">
+          <div class="container cards relative">
+            <div class="card back d-flex center column">
+              <span id="cvc" class="centered_right d-flex">000</span>
+            </div>
+            <div class="card front d-flex column space-between">
+              <img src="./images/card-logo.svg" alt="">
+              <span id="card_number" class="centered">0000 0000 0000 0000</span>
+              <div class="d-flex space-between"><span id="name" class="bottom-left">JANE APPLESEED</span><span class="bottom-right"><span id="month">00</span>/<span id="year">00</span></span></div>
+            </div>
+    
+          </div>
+        </section>
+        <div class="container thank_you">
+            <form  class="d-flex column text-center align-center"action="index.html" id="form">
+                <span class="checkmark"><i class="fa-solid fa-check fa-2x"></i></span>
+                <h1 class="title">Thank You!</h1>
+                <span>We've added your card details</span>
+                <input type="submit" value="Continue">
+            </form>
+            
+
+        </div>
+
+</body>
+<head>
+    <script src="./js/thank_you.js"></script>
+</head>
+</html>

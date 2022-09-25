@@ -19,13 +19,12 @@
     <section class="bg_primary">
       <div class="container cards relative">
         <div class="card back d-flex center column">
-          <span id="CVC" class="centered_right d-flex">000</span>
+          <span id="cvc" class="centered_right d-flex">000</span>
         </div>
         <div class="card front d-flex column space-between">
           <img src="./images/card-logo.svg" alt="">
           <span id="card_number" class="centered">0000 0000 0000 0000</span>
-          <div class="d-flex space-between"><span id="name" class="bottom-left">JANE APPLESEED</span><span
-              id="expiration_date" class="bottom-right">00/00</span></div>
+          <div class="d-flex space-between"><span id="name" class="bottom-left">JANE APPLESEED</span><span class="bottom-right"><span id="month">00</span>/<span id="year">00</span></span></div>
         </div>
 
       </div>
@@ -34,21 +33,25 @@
       <form class="d-flex column" action="thank_you.html" id="form" onsubmit="return validateForm()">
         <label for="cardholder_name">CARDHOLDER NAME</label>
         <input type="text" name="cardholder_name" placeholder="e.g. Jane Appleseed" id="">
-        <div id="nameMsg"></div>
+        <span id="nameMsg" class="msg"></span>
         <label for="card_number">CARD NUMBER</label>
         <input type="text" name="card_number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" id="">
+        <span id="numberMsg" class="msg"></span>
         <div class="date_cvc d-flex">
           <div class="month d-flex column">
             <label for="exp_month">EXP.DATE</label>
             <input type="text" name="exp_month"  maxlength="2" placeholder="MM" id="">
+            <span id="monthMsg" class="msg"></span>
           </div>
           <div class="year d-flex column">
             <label for="exp_year">(MM/YY)</label>
             <input type="text" name="exp_year" maxlength="2" placeholder="YY" id="">
+            <span id="yearMsg" class="msg"></span>
           </div>
           <div class="cvc d-flex column">
             <label for="cvc">CVC</label>
             <input type="text" name="cvc" maxlength="3" placeholder="e.g. 123" id="">
+            <span id="cvcMsg" class="msg"></span>
           </div>
         </div>
         <input type="submit" value="Confirm">

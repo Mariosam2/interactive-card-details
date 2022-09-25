@@ -71,6 +71,14 @@ img {
     flex-direction: column;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
 
 /* #region cards */
 
@@ -128,13 +136,17 @@ img {
     text-align: center;
 }
 
+.front #name, .title {
+    text-transform: uppercase;
+}
+
 
 /* #endregion */
 
 
 /* #region details */
 
-.details {
+.details, .thank_you {
     padding-top: 15vh;
 }
 
@@ -148,7 +160,7 @@ input {
 }
 
 input[type="text"] {
-    margin: 0.5rem 0 1rem 0;
+    margin-top: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.375rem;
     border-style: solid;
@@ -166,6 +178,12 @@ input[type="text"]:focus {
 }
 
 
+.msg {
+    display: inline-block;
+    color: red;
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
 
 
 input[name="card_number"] {
@@ -196,6 +214,32 @@ input[type="submit"]{
     border: none;
 }
 
+.thank_you #form input[type="submit"]{
+    width: 80%;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to right,hsl(249, 99%, 64%) , hsl(278, 94%, 30%));
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+
+
+#form span:not(.checkmark) {
+    display: inline-block;
+    color: var(--var-grayish-violet);
+    
+}
+
+#form span:not(.msg) {
+    margin: 1rem 0 2rem 0;
+}
 
 /* #endregion */
 
@@ -233,7 +277,7 @@ input[type="submit"]{
         left: 25%;
     }
 
-    .container.details {
+    .container.details, .container.thank_you {
         
         position: relative;
     }
