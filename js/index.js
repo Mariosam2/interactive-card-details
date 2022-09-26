@@ -21,7 +21,7 @@ if(year){
 }
 
 if(cvc){
-    document.getElementById("cardcvc").innerHTML = cvc;
+    document.getElementById("cvc").innerHTML = cvc;
 }
 
 const form = document.forms["form"];
